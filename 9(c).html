@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+       function show() {
+              var name = document.getElementById("name").value;
+              var mobile = document.getElementById("mobile").value;
+              var email = document.getElementById("email").value;
+              if (name.length < 6) {
+              document.write("invalid name");
+               }
+              if (mobile.length != 10) {
+            document.write("Invalid Mobile");
+           }
+
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+               document.write("Invalid Email");
+              }
+           else { document.write("All fields are valid!");}
+}
+</script>
+</head>
+<body>
+<form onsubmit="return show()">
+    Name: <input type="text" id="name"><br></br>
+    Mobile: <input type="text" id="mobile"><br></br>
+    Email: <input type="text" id="email"><br></br>
+    <input type="submit" value="sign in">
+</form>
+</body>
+</html>
